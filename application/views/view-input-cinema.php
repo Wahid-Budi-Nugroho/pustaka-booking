@@ -22,6 +22,7 @@
                     </td>
                     <td  width="70%">
                         <select name="judul_film" >
+                            <option value="">-Pilih-</option>
                             <option value="Parasite">Parasite</option>
                             <option value="Hereditary">Hereditary</option>
                             <option value="The Closet">The Closet</option>
