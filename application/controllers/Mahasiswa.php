@@ -1,15 +1,17 @@
 <?php
-class Mahasiswa extends CI_Controller {
-    public function index(){
-        echo "Selamat datang Mahasiswa";
+class Matakuliah extends CI_Controller
+{
+    public function index()
+    {
+        $this->load->view('view-form-matakuliah');
     }
-
-    public function biodata($nim="",$nama=""){
-       $data['nim']=$nim;
-       $data['nama']=$nama;
-       $this->load->view('Mahasiswa_view',$data);
-
-       // echo "Nim:$nim <br>";
-       // echo "Nama: $nama";
+    public function cetak()
+    {
+        $data = [
+            'kode' => $this->input->post('kode'),
+            'nama' => $this->input->post('nama'),
+            'sks' => $this->input->post('sks')
+        ];
+        $this->load->view('view-data-matakuliah', $data);
     }
 }
