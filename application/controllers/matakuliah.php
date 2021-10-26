@@ -10,18 +10,20 @@ class Matakuliah extends CI_Controller
     $this->form_validation->set_rules('kode', 'Kode', 'trim|required|min_length[3]',
     array(
         'required'      => '%s Wajib di isi ',
-        'min_length'      => '%s minimal 3 karakter'
+        'min_length'    => '%s Terlalu Pendek'
         
 ));
 
     $this->form_validation->set_rules('nama', 'Nama MataKuliah', 'required',
     array(
         'required'      => '%s Wajib di isi ',
+        'min_length'    => '%s Terlalu Pendek'
         
 ));
     $this->form_validation->set_rules('sks', 'SKS', 'required',
     array(
-        'required'      => '%s Wajib di isi ',
+        'required'      => '%s Wajib dipilih ',
+        
         
 ));
 
